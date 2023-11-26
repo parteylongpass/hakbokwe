@@ -60,6 +60,11 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to notice button"
+        android:id="@+id/to_notice_btn"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_item_list_rv"

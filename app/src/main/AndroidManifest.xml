@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Hakbokwe"
         tools:targetApi="31">
         <activity
+            android:name=".NoticeListFragment"
+            android:exported="false" />
+        <activity
             android:name=".LoginTriggerActivity"
             android:exported="true">
             <intent-filter>

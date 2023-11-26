@@ -1,6 +1,8 @@
 package com.example.hakbokwe;
 
-public class Stuff {
+import java.io.Serializable;
+
+public class Stuff implements Serializable {
     private String profile;
     private String name;
     private int quantity;

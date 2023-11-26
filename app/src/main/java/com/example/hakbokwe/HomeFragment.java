@@ -2,6 +2,7 @@ package com.example.hakbokwe;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.hakbokwe.databinding.FragmentHomeBinding;
@@ -115,7 +117,20 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
-
         return view;
+    }
+    //notice부분 잘 되는지 테스트
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //아직 메뉴창 없어서 임의로 버튼 만듦
+        Button button = view.findViewById(R.id.to_notice_btn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_frm, new NoticeListFragment()).addToBackStack(null).commit();
+            }
+        });
     }
 }
